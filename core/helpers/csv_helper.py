@@ -49,6 +49,7 @@ def csv_post_processing(path):
     with open(path, 'w') as file:
         file.write(file_data)
 
+
 def write_csv(filename, headers, rows, success_msg=None):
     """
     generates a csv file at the output location with given filename
@@ -69,4 +70,3 @@ def write_csv(filename, headers, rows, success_msg=None):
         print(success_msg or 'Csv written successfully.')
     else:
         print('Nothing to write.')
-

@@ -11,11 +11,9 @@ class UserRelationships:
     INITIAL_ID = GLOBAL_INITIAL_ID
     MANAGER_ID = 8
 
-
     def __init__(self, employee_list):
         # creating user accounts for managers only
         self.employee_list = employee_list
-
 
     def get_data(self):
         data_list = []
@@ -45,5 +43,6 @@ class UserRelationships:
         if data_list:
             headers = list(data_list[0].keys())
             rows = [list(user_relationship.values()) for user_relationship in data_list]
-            csv_helper.write_csv('user_relationships.csv', headers, rows, 'User relationships csv successfully generated.')
+            csv_helper.write_csv('user_relationships.csv', headers, rows,
+                                 'User relationships csv successfully generated.')
         return data_list
